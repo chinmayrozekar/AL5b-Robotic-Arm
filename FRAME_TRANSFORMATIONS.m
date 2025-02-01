@@ -1,0 +1,10 @@
+UTA = [1 0 0 5;0 1 0 5;0 0 1 2; 0 0 0 1]
+ATB =[cosd(90) 0 sind(90) 0;0 1 0 0;-sind(90) 0 cosd(90) 0;0 0 0 1]*UTA
+BTC = [0 0 1 2;0 1 0 16.8;-1 0 0 -5;0 0 0 1]*ATB
+CTD = [cosd(90) 0 sind(90) 0;0 1 0 0;-sind(90) 0 cosd(90) 0;0 0 0 1]*BTC
+DTE = [cosd(-90) 0 sind(-90) 0;0 1 0 0;-sind(-90) 0 cosd(-90) 0;0 0 0 1]*CTD
+DTETRANS = [-1 0 0 9.5;0 1 0 21.8;0 0 -1 -7;0 0 0 1]*DTE
+ROTDTETRANS = [cosd(90) 0 1 0;0 1 0 0;-sind(90) 0 cosd(90) 0;0 0 0 1]*DTETRANS
+ETF = [0 0 1 0;0 1 0 43.6;-1 0 0 -6.5;0 0 0 1]*ROTDTETRANS
+FTT = [-1 0 0 -12.5;0 1 0 87.2;0 0 -1 -0.5;0 0 0 1]*ETF
+UTT = FTT
